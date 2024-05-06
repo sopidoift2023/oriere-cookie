@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+  background-image: url('ok.jpeg');
+  background-size: cover; /* This ensures the image covers the entire element */
+  background-position: center; /* This centers the image */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+          color: green;
+          
+            
+        
+       
+            
+            
+            
+            
+        
+    </style>
+    <title>Login</title>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            // Get the email and password from the form
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Make a request to the server to validate the login credentials
+            // For demonstration, we'll assume the validation is successful
+            const loginSuccess = true;
+
+            // This is a placeholder; you need to implement the actual validation logic with your server
+
+            if (loginSuccess) {
+                // Redirect to the home page (index.html) on successful login
+                window.location.href = 'index.html';
+            } else {
+                // Handle login failure (e.g., show an error message)
+                alert('Invalid email or password. Please try again.');
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Login</h1>
+    
+    <!-- Login Form -->
+    <form onsubmit="handleLogin(event)">
+        
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        
+        <!-- Submit Button -->
+        <input type="submit" value="Login">
+        
+    </form>
+
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+
+</body>
+</html>
